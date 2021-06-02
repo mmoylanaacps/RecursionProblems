@@ -1,72 +1,93 @@
 Complete at least 4 of the recusive functions in main.py
 
-Given n of 1 or more, return the factorial of n, which is n * (n-1) * (n-2) ... 1. Compute the result recursively (without loops).
-
-Ex:
- factorial(1) → 1
- factorial(2) → 2
- factorial(3) → 6
+We have triangle made of blocks. The topmost row has 1 block, the next row down has 2 blocks, the next row has 3 blocks, and so on. 
 
 ```
-def factorial(n):
+[]
+[][]
+[][][]
+```
+
+Compute recursively (no loops or multiplication) the total number of blocks in such a triangle with the given number of rows.
+
+Ex:
+```
+ traingle(0) → 0
+ triangle(1) → 1
+ triangle(2) → 3
+ triangle(3) → 6
+```
+
+```
+def triangle(n):
   
 ```
 
-We have a number of bunnies and each bunny has two big floppy ears. We want to compute the total number of ears across all the bunnies recursively (without loops or multiplication).
+Radiation decay.  There is a radioactive substance that gives off radiation at a high rate.  Radition is measured by Rads.  Each year the radation it gives off is reduced by 75 percesnt.  For example with a starting value of 10 rads, it would be 2.5 rads after 1 year, and it would be .625 rads after 2 years. It is considered safe if it has less than or equal to .1 Rads.  Given a starting radiation level in rads calculate the number or years till it is below a safe level. Write this recursively no loops or sigle equations. 
 
 Ex:
-bunnyEars(0) → 0
-bunnyEars(1) → 2
-bunnyEars(2) → 4
-
 ```
-def bunnyEars(n):
+ yearsTillSafe(.1) → 0
+ yearsTillSafe(1) → 2
+ yearsTillSafe(10) → 4
+ yearsTillSafe(50) → 5
+```
+```
+def yearsTillSafe(rads):
   
 ```
 
-The fibonacci sequence is a famous bit of mathematics, and it happens to have a recursive definition. The first two values in the sequence are 0 and 1 (essentially 2 base cases). Each subsequent value is the sum of the previous two values, so the whole sequence is: 0, 1, 1, 2, 3, 5, 8, 13, 21 and so on. Define a recursive fibonacci(n) method that returns the nth fibonacci number, with n=0 representing the start of the sequence.
+Given an array of ints, compute recursively if the array contains a 6. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
 
-Ex:
-fibonacci(0) → 0
-fibonacci(1) → 1
-fibonacci(2) → 1
+ex:
+```
+array6([1, 6, 4], 0) → true
+array6([1, 4], 0) → false
+array6([6], 0) → true
+```
 
 ```
-def fibonacci(n):
+def array6(arr, index):
   
 ```
 
-We have people standing in a line, numbered 1, 2, ... The odd people (1, 3, ..) get 2 slices of pizza. The even people (2, 4, ..) get 3 slices of pizza. Recursively return the number of slices needed for lines of different sizes line 1, 2, ... n (without loops or multiplication).
+Reverse List.  Given a string in python return the string reversed.  tips: in python you can get a single character at postion i from string by using myString[i], you can get a substring by saying myString[start:end] using any numbers for start and end.  
 
 Ex:
-pizzaSlices(0) → 0
-pizzaSlices(1) → 2
-pizzaSlices(2) → 5
-
 ```
-def pizzaSlices(n):
+reverse("cat") → "tac"
+reverse("aabb") → "bbaa"
+reverse("a") → "a"
+reverse("") → ""
+```
+```
+def reverse(text):
   
 ```
 
-Given a non-negative int n, return the sum of its digits recursively (no loops). Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (//) by 10 removes the rightmost digit (126 // 10 is 12).
+Given a non-negative int n, return the product of its digits recursively (no loops). Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (//) by 10 removes the rightmost digit (126 // 10 is 12).
 
 Ex:
-sumDigits(126) → 9
-sumDigits(49) → 13
-sumDigits(12) → 3
-
 ```
-def sumDigits(n):
+prodDigits(126) → 12
+prodDigits(49) → 36
+prodDigits(12) → 2
+```
+```
+def prodDigits(n):
   
 ```
 
-Given a non-negative int n, return the count of the occurrences of x as a digit, so for example if n is 717 and num is 7 it yields 2. (no loops). Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (//) by 10 removes the rightmost digit (126 // 10 is 12).
+Given a non-negative int n, return the number of even digits, so for example if n is 212  yields 2. (no loops). Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (//) by 10 removes the rightmost digit (126 // 10 is 12).
 
 Ex: 
-#countNum(717,7) → 2
-#countNum(2,2) → 1
-#countNum(123,5) → 0
 ```
-def countNum(n,x):
+countEvens(717) → 0
+countEvens(2) → 1
+countEvens(212) → 2
+countEvens(21458) → 3
+```
+```
+def countEvens(n,x):
   
 ```
